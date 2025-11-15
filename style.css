@@ -1,0 +1,253 @@
+/*
+    Portfolio CSS Styling
+    Color Palette:
+    Primary (Deep Blue): #007BFF
+    Secondary (Dark Navy): #2C3E50
+    Accent (Vibrant Green): #2ECC71
+    Text (Off-White): #ECF0F1
+    Background (Dark): #1C2833
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #1C2833; /* Dark Background */
+    color: #ECF0F1; /* Off-White Text */
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #007BFF; /* Deep Blue Headings */
+}
+
+h2.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #2ECC71; /* Vibrant Green Accent */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* --- Navigation Bar --- */
+#navbar {
+    background: #2C3E50; /* Dark Navy */
+    color: #ECF0F1;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul li a {
+    color: #ECF0F1;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+#navbar ul li a:hover {
+    color: #2ECC71; /* Vibrant Green Hover */
+}
+
+/* --- Hero/Home Section --- */
+#home {
+    background: #1C2833;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px; /* Space for fixed navbar */
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 1.5em;
+    color: #ECF0F1;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: #BDC3C7;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #007BFF;
+    color: #ECF0F1;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #2ECC71;
+}
+
+/* --- General Section Styling --- */
+.section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background: #243447; /* Slightly lighter dark background for contrast */
+}
+
+/* --- About & Skills Section --- */
+.about-content, .education {
+    margin-bottom: 40px;
+}
+
+.icon-spacing {
+    margin-right: 10px;
+}
+
+.skills-list ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skills-list li {
+    background: #2C3E50;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border-left: 3px solid #007BFF;
+}
+
+.skill-icon {
+    color: #2ECC71;
+    margin-right: 8px;
+}
+
+/* --- Projects Section --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #2C3E50;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #2ECC71;
+    margin-bottom: 10px;
+}
+
+.tech-stack {
+    color: #BDC3C7;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    color: #007BFF;
+    text-decoration: none;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+/* --- Footer/Contact Section --- */
+#contact {
+    text-align: center;
+    background: #2C3E50;
+    padding: 40px 0;
+}
+
+.contact-links {
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+.contact-icon {
+    color: #ECF0F1;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.contact-icon:hover {
+    color: #007BFF;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #BDC3C7;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    #navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #navbar ul {
+        margin-top: 10px;
+    }
+
+    #navbar ul li a {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+}
